@@ -42,17 +42,25 @@ public	class FageUIRoot {
 		_dicSet.Clear ();
 		_dicCurtain.Clear ();
 
-		foreach (FageUITransition trans in transitions) {
-			_dicTransition.Add (trans.id, trans);
+		if (transitions!=null) {
+			foreach (FageUITransition trans in transitions) {
+				_dicTransition.Add (trans.id, trans);
+			}
 		}
-		foreach (FageUIDetail detail in details) {
-			_dicDetail.Add (detail.id, detail);
+		if (details!=null) {
+			foreach (FageUIDetail detail in details) {
+				_dicDetail.Add (detail.id, detail);
+			}
 		}
-		foreach (FageUISet set in sets) {
-			_dicSet.Add (set.id, set);
+		if (sets!=null) {
+			foreach (FageUISet set in sets) {
+				_dicSet.Add (set.id, set);
+			}
 		}
-		foreach (FageUICurtain curtain in curtains) {
-			_dicCurtain.Add (curtain.id, curtain);
+		if (curtains!=null) {
+			foreach (FageUICurtain curtain in curtains) {
+				_dicCurtain.Add (curtain.id, curtain);
+			}
 		}
 	}
 

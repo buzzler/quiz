@@ -26,15 +26,20 @@ public	class FageUIMem : FageUICommonMem {
 		GameObject go = GameObject.Instantiate (cach, move ? transition.GetPosition ():_uiDetail.GetPosition (), rotate ? transition.GetRotation ():_uiDetail.GetRotation ()) as GameObject;
 		go.transform.SetParent (canvas, false);
 		_component = go.GetComponent<IFageUIComponent> ();
+
+		LTDescr result = null;
+		if (move)
+			result = LeanTween.moveLocal (go, _uiDetail.GetPosition (), transition.time).setDelay (transition.delay).setEase (transition.ease);
+		if (rotate)
+			result = LeanTween.rotateLocal (go, _uiDetail.GetRotation().eulerAngles, transition.time).setDelay(transition.delay).setEase(transition.ease);
 		if (scale) {
 			go.transform.localScale = transition.GetScale();
+			result = LeanTween.scale (go, _uiDetail.GetScale(), transition.time).setDelay(transition.delay).setEase(transition.ease);
 		}
-		if (move)
-			LeanTween.moveLocal (go, _uiDetail.GetPosition (), transition.time).setDelay (transition.delay).setEase (transition.ease).setOnComplete (callback);
-		if (rotate)
-			LeanTween.rotateLocal (go, _uiDetail.GetRotation().eulerAngles, transition.time).setDelay(transition.delay).setEase(transition.ease);
-		if (scale)
-			LeanTween.scale (go, _uiDetail.GetScale(), transition.time).setDelay(transition.delay).setEase(transition.ease);
+
+		if (result!=null) {
+			result.setOnComplete(callback);
+		}
 	}
 
 	private	void SetTweenOut(byte tween, FageUITransition transition, System.Action callback) {
@@ -42,13 +47,17 @@ public	class FageUIMem : FageUICommonMem {
 		bool rotate = (tween & FageUITransition.ROTATION) != FageUITransition.NONE;
 		bool scale = (tween & FageUITransition.SCALE) != FageUITransition.NONE;
 
+		LTDescr result = null;
 		GameObject go = _component.GetGameObject();
 		if (move)
-			LeanTween.moveLocal (go, transition.GetPosition(), transition.time).setDelay (transition.delay).setEase (transition.ease).setOnComplete (callback);
+			result = LeanTween.moveLocal (go, transition.GetPosition(), transition.time).setDelay (transition.delay).setEase (transition.ease);
 		if (rotate)
-			LeanTween.rotateLocal (go, transition.GetRotation().eulerAngles, transition.time).setDelay(transition.delay).setEase(transition.ease);
+			result = LeanTween.rotateLocal (go, transition.GetRotation().eulerAngles, transition.time).setDelay(transition.delay).setEase(transition.ease);
 		if (scale)
-			LeanTween.scale (go, transition.GetScale(), transition.time).setDelay(transition.delay).setEase(transition.ease);
+			result = LeanTween.scale (go, transition.GetScale(), transition.time).setDelay(transition.delay).setEase(transition.ease);
+
+		if (result!=null)
+			result.setOnComplete(callback);
 	}
 
 	public	void Instantiate(Transform canvas, params object[] param) {
@@ -60,6 +69,7 @@ public	class FageUIMem : FageUICommonMem {
 	private void OnInstantiateComplete() {
 		FageScreenManager.Instance.AddEventListener (FageScreenEvent.ORIENTATION, OnScreenOrientation);
 		SetState (FageUICommonMem.INTANTIATED);
+		_component.OnUIInstantiated (this);
 	}
 
 	public	void Destroy() {
@@ -83,6 +93,7 @@ public	class FageUIMem : FageUICommonMem {
 	private	void OnResumeComplete() {
 		FageScreenManager.Instance.AddEventListener (FageScreenEvent.ORIENTATION, OnScreenOrientation);
 		SetState (FageUICommonMem.INTANTIATED);
+		_component.OnUIResumed (this);
 	}
 	
 	public	void Pause() {
