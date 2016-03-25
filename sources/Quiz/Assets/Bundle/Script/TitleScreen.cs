@@ -15,6 +15,10 @@ public class TitleScreen : MonoBehaviour, IFageUIComponent {
 		return gameObject;
 	}
 
+	public	void OnClickSingle() {
+		FageUIManager.Instance.Push(FageUIRoot.Instance.FindUISet("ui_subject"));
+	}
+
 	public	void OnClickVS() {
 		FageUIManager.Instance.Push(FageUIRoot.Instance.FindUISet("ui_vssubject"));
 	}

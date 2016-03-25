@@ -13,6 +13,11 @@
 	  <UIDetail id="ui_upgrade" asset="assets/bundle/prefab/ui_upgrade.prefab" bundle="fage" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" scaleX="1" scaleY="1" scaleZ="1" onInstantiate="trans.popin" onDestroy="trans.popout" onResume="trans.popin" onPause="trans.popout" onSwitchIn="trans.popin" onSwitchOut="trans.popout" />
 	  <UIDetail id="ui_thunder" asset="assets/bundle/prefab/ui_thunder.prefab" bundle="fage" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" scaleX="1" scaleY="1" scaleZ="1" onInstantiate="trans.popin" onDestroy="trans.popout" onResume="trans.popin" onPause="trans.popout" onSwitchIn="trans.popin" onSwitchOut="trans.popout" />
 	  <UIDetail id="ui_vssubject" asset="assets/bundle/prefab/ui_vssubject.prefab" bundle="fage" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" scaleX="1" scaleY="1" scaleZ="1" onInstantiate="trans.popin" onDestroy="trans.popout" onResume="trans.popin" onPause="trans.popout" onSwitchIn="trans.popin" onSwitchOut="trans.popout" />
+	  <UIDetail id="ui_vs" asset="assets/bundle/prefab/ui_vs.prefab" bundle="fage" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" scaleX="1" scaleY="1" scaleZ="1" onInstantiate="trans.popin" onDestroy="trans.popout" onResume="trans.popin" onPause="trans.popout" onSwitchIn="trans.popin" onSwitchOut="trans.popout" />
+	  <UIDetail id="ui_pause" asset="assets/bundle/prefab/ui_pause.prefab" bundle="fage" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" scaleX="1" scaleY="1" scaleZ="1" onInstantiate="trans.popin" onDestroy="trans.popout" onResume="trans.popin" onPause="trans.popout" onSwitchIn="trans.popin" onSwitchOut="trans.popout" />
+	  <UIDetail id="ui_result" asset="assets/bundle/prefab/ui_result.prefab" bundle="fage" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" scaleX="1" scaleY="1" scaleZ="1" onInstantiate="trans.popin" onDestroy="trans.popout" onResume="trans.popin" onPause="trans.popout" onSwitchIn="trans.popin" onSwitchOut="trans.popout" />
+	  <UIDetail id="ui_subject" asset="assets/bundle/prefab/ui_subject.prefab" bundle="fage" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" scaleX="1" scaleY="1" scaleZ="1" onInstantiate="trans.popin" onDestroy="trans.popout" onResume="trans.popin" onPause="trans.popout" onSwitchIn="trans.popin" onSwitchOut="trans.popout" />
+	  <UIDetail id="ui_single" asset="assets/bundle/prefab/ui_single.prefab" bundle="fage" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" scaleX="1" scaleY="1" scaleZ="1" onInstantiate="trans.popin" onDestroy="trans.popout" onResume="trans.popin" onPause="trans.popout" onSwitchIn="trans.popin" onSwitchOut="trans.popout" />
 	  <UISet id="ui_splash" onPortrait="ui_splash" onLandscape="ui_splash" />
 	  <UISet id="ui_title" onPortrait="ui_title" onLandscape="ui_title" />
 	  <UISet id="ui_option" onPortrait="ui_option" onLandscape="ui_option" />
@@ -20,6 +25,11 @@
 	  <UISet id="ui_upgrade" onPortrait="ui_upgrade" onLandscape="ui_upgrade" />
 	  <UISet id="ui_thunder" onPortrait="ui_thunder" onLandscape="ui_thunder" />
 	  <UISet id="ui_vssubject" onPortrait="ui_vssubject" onLandscape="ui_vssubject" />
+	  <UISet id="ui_vs" onPortrait="ui_vs" onLandscape="ui_vs" />
+	  <UISet id="ui_pause" onPortrait="ui_pause" onLandscape="ui_pause" />
+	  <UISet id="ui_result" onPortrait="ui_result" onLandscape="ui_result" />
+	  <UISet id="ui_subject" onPortrait="ui_subject" onLandscape="ui_subject" />
+	  <UISet id="ui_single" onPortrait="ui_single" onLandscape="ui_single" />
 	  <UICurtain id="blackout" asset="assets/fage/prefab/blackout.prefab" bundle="fage" />
 	  <UICurtain id="whiteout" asset="assets/fage/prefab/whiteout.prefab" bundle="fage" />
 	</UIRoot>

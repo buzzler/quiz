@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2832438705
+CRC: 1130336150
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 37ffb9f5fd8886c5115ea4451a332d37
+    Hash: d1778fb443e7ecfdd79ddd8683520b68
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2b65cffd6d6498aafd9bd8f8ae48928d
+    Hash: b74b8b502f21c6dcc3845139347916f2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -18,9 +18,15 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  Script: {fileID: 11500000, guid: ac0ec25071c3544e1b6f5fcf92a5a733, type: 3}
 - Class: 114
-  Script: {fileID: -2095666955, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  Script: {fileID: 11500000, guid: e2fb7e91b16e4406e923e0e95966e2d4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3bb119f1c987345ce964a8f2fe7ac72b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 574a8012b73e84054a78dfff2d6dfa3e, type: 3}
+- Class: 114
+  Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 - Class: 114
   Script: {fileID: -405508275, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 - Class: 114
@@ -40,21 +46,21 @@ ClassTypes:
 - Class: 114
   Script: {fileID: -1184210157, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 74ed088e4b1724ee78b3ee3d09094785, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 903b6b8ccf0fe4ac2a17ed45ac4963c1, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: d9f46f6a2911e42eeb22b4317ef317cb, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 574a8012b73e84054a78dfff2d6dfa3e, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 57ed34a2f410e4cda8a665ee7db26198, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 7edb850318932483fac3f8243444820e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 462c6d58bb06a4c32b0553d435dc836d, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: d9f46f6a2911e42eeb22b4317ef317cb, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 3e2ae67c19ff9400ab1aa4b371c305c5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 903b6b8ccf0fe4ac2a17ed45ac4963c1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 74ed088e4b1724ee78b3ee3d09094785, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e1354e8fa600b4523ae8d8abc8de13d0, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -69,10 +75,14 @@ Assets:
 - Assets/Bundle/Prefab/ui_vssubject.prefab
 - Assets/FAGE/Prefab/blackout.prefab
 - Assets/FAGE/Prefab/whiteout.prefab
+- Assets/Bundle/Prefab/ui_pause.prefab
+- Assets/Bundle/Prefab/ui_vs.prefab
 - Assets/Bundle/Prefab/ui_upgrade.prefab
 - Assets/Bundle/Prefab/ui_store.prefab
 - Assets/Bundle/Prefab/ui_title.prefab
+- Assets/Bundle/Prefab/ui_result.prefab
 - Assets/Bundle/Prefab/ui_splash.prefab
+- Assets/Bundle/Prefab/ui_subject.prefab
 - Assets/Bundle/Image/System/splash.png
 - Assets/Bundle/Prefab/ui_thunder.prefab
 - Assets/Bundle/Prefab/ui_option.prefab
